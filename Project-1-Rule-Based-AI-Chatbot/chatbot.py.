@@ -1,8 +1,5 @@
 from datetime import datetime
-
-# ==========================
 # AI CHATBOT FUNCTION
-# ==========================
 
 def chatbot(user_input):
     user_input = user_input.lower().strip()
@@ -146,9 +143,8 @@ def chatbot(user_input):
         return "Sorry! I don't understand your question. Please try something else."
 
 
-# ==========================
+
 # MAIN PROGRAM
-# ==========================
 
 print("=" * 60)
 print("           WELCOME TO AI CHATBOT")

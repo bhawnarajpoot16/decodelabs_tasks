@@ -1,0 +1,167 @@
+from datetime import datetime
+
+# ==========================
+# AI CHATBOT FUNCTION
+# ==========================
+
+def chatbot(user_input):
+    user_input = user_input.lower().strip()
+
+    # Greetings
+    if user_input in ["hi", "hello", "hey"]:
+        return "Hello! Welcome to the AI Chatbot. How can I help you today?"
+
+    elif user_input == "good morning":
+        return "Good Morning! Have a wonderful day."
+
+    elif user_input == "good afternoon":
+        return "Good Afternoon! Hope your day is going well."
+
+    elif user_input == "good evening":
+        return "Good Evening! Hope you are doing well."
+
+    elif user_input == "good night":
+        return "Good Night! Sweet dreams."
+
+    # Basic Conversation
+    elif user_input == "how are you":
+        return "I'm doing great! Thank you for asking."
+
+    elif user_input in ["i am fine", "fine", "good"]:
+        return "That's great to hear!"
+
+    elif user_input in ["not good", "sad"]:
+        return "Don't worry. Everything will be fine. Keep smiling!"
+
+    elif user_input == "what is your name":
+        return "My name is AI Chatbot."
+
+    elif user_input == "who are you":
+        return "I am a Rule-Based AI Chatbot created using Python."
+
+    elif user_input == "who created you":
+        return "I was created by Bhawna Rajpoot using Python."
+
+    elif user_input == "what can you do":
+        return "I can answer basic questions, tell jokes, motivate you, show date & time and help you with programming."
+
+    elif user_input == "where are you from":
+        return "I live inside this Python program."
+
+    elif user_input == "what are you doing":
+        return "I am chatting with you."
+
+    # Programming
+    elif user_input == "help me in study":
+        return "Sure! I can help you with Python, Java, C++, JavaScript and AI."
+
+    elif user_input == "python":
+        return "Python is an easy and powerful programming language."
+
+    elif user_input == "java":
+        return "Java is an object-oriented programming language."
+
+    elif user_input == "c++":
+        return "C++ is a powerful programming language used for competitive programming."
+
+    elif user_input == "javascript":
+        return "JavaScript is used to make websites interactive."
+
+    elif user_input == "what is ai":
+        return "Artificial Intelligence is the simulation of human intelligence by machines."
+
+    elif user_input == "what is machine learning":
+        return "Machine Learning is a branch of Artificial Intelligence."
+
+    # Date & Time
+    elif user_input == "date":
+        return "Today's Date: " + datetime.now().strftime("%d-%m-%Y")
+
+    elif user_input == "time":
+        return "Current Time: " + datetime.now().strftime("%H:%M:%S")
+
+    elif user_input in ["date and time", "current date and time"]:
+        return "Current Date & Time: " + datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+
+    elif user_input == "what is today's day":
+        return "Today is " + datetime.now().strftime("%A")
+
+    # Motivation
+    elif user_input == "motivate me":
+        return "Believe in yourself. Work hard, stay focused and success will follow."
+
+    # Joke
+    elif user_input == "tell me a joke":
+        return "Why do programmers prefer dark mode? Because light attracts bugs!"
+
+    # Quote
+    elif user_input == "tell me a quote":
+        return "Success doesn't come from what you do occasionally. It comes from what you do consistently."
+
+    # Facts
+    elif user_input == "tell me a fact":
+        return "Did you know? Python was created by Guido van Rossum in 1991."
+
+    # Fun
+    elif user_input == "can you sing":
+        return "Sorry! I can't sing, but I can chat with you."
+
+    elif user_input == "can you dance":
+        return "I can't dance, but I can help you learn programming."
+
+    elif user_input == "do you like music":
+        return "Yes! Music is a wonderful way to relax."
+
+    elif user_input == "what is your favorite color":
+        return "I like all colors."
+
+    elif user_input == "what is your favorite food":
+        return "I don't eat food, but pizza sounds delicious!"
+
+    elif user_input == "are you a human":
+        return "No, I am an AI Chatbot."
+
+    elif user_input == "how old are you":
+        return "I don't have an age because I am a computer program."
+
+    elif user_input == "i love you":
+        return "Thank you! I'm always happy to help you."
+
+    elif user_input == "who is your best friend":
+        return "Everyone who talks to me is my friend."
+
+    elif user_input == "who is the prime minister of india":
+        return "The Prime Minister of India is Narendra Modi."
+
+    # Thanks
+    elif user_input in ["thank you", "thanks"]:
+        return "You're welcome! Happy to help."
+
+    # Exit
+    elif user_input in ["bye", "goodbye", "exit"]:
+        return "Goodbye! Have a nice day."
+
+    # Default
+    else:
+        return "Sorry! I don't understand your question. Please try something else."
+
+
+# ==========================
+# MAIN PROGRAM
+# ==========================
+
+print("=" * 60)
+print("           WELCOME TO AI CHATBOT")
+print("=" * 60)
+print("Type 'bye' or 'exit' to close the chatbot.")
+print("=" * 60)
+
+while True:
+    user = input("\nYou : ")
+
+    reply = chatbot(user)
+
+    print("Bot :", reply)
+
+    if user.lower() in ["bye", "goodbye", "exit"]:
+        break
